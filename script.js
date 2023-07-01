@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var phoneNumber = formData.get('phoneNumber');
     var color = formData.get('color');
     var capacity = formData.get('capacity');
+    var pieces = formData.get('pieces'); 
 
     // Send order confirmation email to the customer
     var customerTemplateParams = {
@@ -29,7 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
       zipCode: zipCode,
       phoneNumber: phoneNumber,
       color: color,
-      capacity: capacity
+      capacity: capacity,
+      pieces: pieces
     };
 
     emailjs.send('service_i2qw759', 'template_t81j4kb', customerTemplateParams)
@@ -52,7 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
       zipCode: zipCode,
       phoneNumber: phoneNumber,
       color: color,
-      capacity: capacity
+      capacity: capacity,
+      pieces: pieces
     };
 
     emailjs.send('service_i2qw759', 'template_2kfj26l', adminTemplateParams)
